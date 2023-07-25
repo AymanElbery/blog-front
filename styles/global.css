@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.waved-line-after {
+  position: relative;
+}
+
+.waved-line-after::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Adjust this value to control the distance between the title and the waved line */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #000 25%, transparent 25%) -20px 0;
+  background-size: 40px 2px;
+}
