@@ -1,7 +1,7 @@
 
 
 export const getAllPosts = async () => {
-    const response = await fetch('http://localhost:4000/posts',{
+    const response = await fetch('https://asker-blog-api-86ba8ad114bc.herokuapp.com/posts',{
       next:{
         revalidate:2
       }
@@ -15,7 +15,7 @@ export const getAllPosts = async () => {
   };
 
 export const getPostById = async (postId) => {
-  const response = await fetch(`http://localhost:4000/posts/${postId}`,{
+  const response = await fetch(`https://asker-blog-api-86ba8ad114bc.herokuapp.com/posts/${postId}`,{
     next:{
       revalidate:2
     }
@@ -29,7 +29,7 @@ export const getPostById = async (postId) => {
 
 
 export const addPost = async (postData) => {
-  const response = await fetch('http://localhost:4000/posts', {
+  const response = await fetch('https://asker-blog-api-86ba8ad114bc.herokuapp.com/posts', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export const addPost = async (postData) => {
 
 export const editPost = async (postId, postData) => {
   try {
-    const response = await fetch(`http://localhost:4000/posts/${postId}`, {
+    const response = await fetch(`https://asker-blog-api-86ba8ad114bc.herokuapp.com/posts/${postId}`, {
       method: 'PUT', // or 'PATCH' depending on your server's API
       headers: {
         'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export const editPost = async (postId, postData) => {
 
 export const deletePost = async (postId) => {
   try {
-    const response = await fetch(`http://localhost:4000/posts/${postId}`, {
+    const response = await fetch(`https://asker-blog-api-86ba8ad114bc.herokuapp.com/posts/${postId}`, {
       method: 'DELETE',
     });
 
